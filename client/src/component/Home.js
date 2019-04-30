@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 import logo from '../images/turtles.jpg'
+import { CSSTransition } from 'react-transition-group'
+import Fade from 'react-reveal/Fade';
+
+import './Home.css'
 
 
  const Home = () => {
@@ -9,13 +13,17 @@ import logo from '../images/turtles.jpg'
     <>
       <Hero>
         <Disp>
-          <Text>I like Turtles...</Text>
+          <Fade top duration={2000}>
+            <Text>I LIKE TURTLES...</Text>
+          </Fade>
         </Disp>
       </Hero>
-      <MidDiv>
-        <MidText></MidText>
-        <MidText>and coding.</MidText>
-      </MidDiv>
+        <Fade duration={2500}>
+        <MidDiv key='mid'>
+          <MidText></MidText>
+          <MidText>and coding.</MidText>
+        </MidDiv>
+        </Fade>
       <BotDiv>
         <BotText>and even more coding.</BotText>
       </BotDiv>
@@ -39,6 +47,11 @@ const Hero = styled.div`
 const Text = styled.h1`
   color: white;
   font-size: 5em;
+  font-family: 'Noto Sans TC', sans-serif;
+
+`
+
+const TransDiv = styled.span`
 `
 const MidText = styled.h1`
   color: #ededed;
@@ -61,7 +74,9 @@ const MidDiv = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #686868;
+  background: #313947;
+
+
 `
 const BotDiv = styled.div`
   height: 90vh; 
@@ -70,3 +85,4 @@ const BotDiv = styled.div`
   align-items: center;
   background: #ededed;
 `
+
