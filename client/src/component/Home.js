@@ -7,10 +7,11 @@ import logo from '../images/turtles.jpg'
 
   return (
     <>
-    <Hero>
-      <HeroImg src={logo} />
-    </Hero>
-    <h1>You are Home</h1>
+      <Hero>
+        <Disp>
+          <Text>I like Turtles.</Text>
+        </Disp>
+      </Hero>
     </>
   )
 }
@@ -20,10 +21,23 @@ export default Home
 const Hero = styled.div`
   width: 100%;
   contain: content;
-  
+  display: flex;  
+  height: 100vh;
+  background-image: url(${logo}) !important;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+`
+const Text = styled.h1`
+  color: white;
+  font-size: 5em;
 `
 
-const HeroImg = styled.img`
-  width: 100%;
-  height: 100%;
+const Disp = styled.div`
+  display: flex;
+  height: 50vh;
+  width: 55vw;
+  justify-content: center;
+  align-items: center;
 `

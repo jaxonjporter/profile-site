@@ -1,36 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'
+import {Link,} from 'react-router-dom'
 
 const Navbar = () => {
+  const [active, setActive] = useState('')
+
+  const changeActive = (item) => {
+    debugger
+    setActive(item)
+  }
+
   return(
     <NavDiv>
-      <Right>
-        <Par>
-          <h3>One</h3>
-        </Par>
-        <Par>
-          <h3>Two</h3>
-        </Par>
-        <Par>
-          <h3>Three</h3>
-        </Par>
-      </Right>
-      <Left>
-        <Par>
-          <h3>one</h3></Par>
-        <Par><h3>two</h3></Par>
-      </Left>
+      <LeftRight>
+        <NavItem as={Link} to='/' onClick={() => changeActive('home')}>
+          <NavText>Home</NavText>
+        </NavItem>
+        <NavItem as={Link} to='/about' onClick={() => changeActive('about')}>
+          <NavText>About</NavText>
+        </NavItem>
+        <NavItem>
+          <NavText>Contact</NavText>
+        </NavItem>
+      </LeftRight>
+      <LeftRight>
+        <NavItem>
+          <h3>Info</h3>
+        </NavItem>
+        <NavItem>
+          <h3>Help</h3>
+        </NavItem>
+      </LeftRight>
     </NavDiv>
   )
 }
 
 export default Navbar
 
-const Par = styled.div`
-padding: 5px;
+const NavItem = styled.div`
+padding: 5px 15px;
+color: white;
 
 :hover {
-  background: #ededed;
+  color: grey;
 }
 `
 
@@ -42,23 +54,17 @@ const NavDiv = styled.div`
   left: 0;
   width: 100%;
   display: flex;
-  padding: 10px;
+  padding: 5px;
   justify-content: space-between
 `
 
-const Right = styled.div`
-  border: 1px solid white;
-  padding: 10px;
+const LeftRight = styled.div`
+  padding: 5px;
   display: flex;
   align-items: center;
   cursor: pointer;
 
 `
-const Left = styled.div`
-  border: 1px solid white;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-
+const NavText = styled.h3`
+  font-size: 1.7em;
 `
