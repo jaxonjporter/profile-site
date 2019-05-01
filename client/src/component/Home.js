@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import logo from '../images/turtles.jpg'
-import { CSSTransition } from 'react-transition-group'
 import Fade from 'react-reveal/Fade';
 
 import './Home.css'
@@ -14,18 +13,19 @@ import './Home.css'
       <Hero>
         <Disp>
           <Fade top duration={2000}>
-            <Text>I LIKE TURTLES...</Text>
+            <Text>I like turtles...</Text>
           </Fade>
         </Disp>
       </Hero>
         <Fade duration={2500}>
         <MidDiv key='mid'>
-          <MidText></MidText>
-          <MidText>and coding.</MidText>
+          <MidText> </MidText>
+          <MidText>and developing websites.</MidText>
         </MidDiv>
         </Fade>
       <BotDiv>
-        <BotText>and even more coding.</BotText>
+        <BotText>Will be pic</BotText>
+        <BotText>It's nice to meet you.</BotText>
       </BotDiv>
     </>
   )
@@ -45,25 +45,28 @@ const Hero = styled.div`
 
 `
 const Text = styled.h1`
-  color: white;
+  color: #f7faff;
   font-size: 5em;
   font-family: 'Noto Sans TC', sans-serif;
 
 `
 
-const TransDiv = styled.span`
-`
 const MidText = styled.h1`
   color: #ededed;
   font-size: 5em;
+  margin: 25px;
 `
 const BotText = styled.h1`
-  color: #686868;
+  color: #313947;
   font-size: 5em;
+  margin: 0;
 `
 
 const Disp = styled.div`
   display: flex;
+  min-height: 300px;
+  min-width: 300px;
+  margin-left: 20px;
   height: 50vh;
   width: 55vw;
   justify-content: center;
@@ -72,7 +75,7 @@ const Disp = styled.div`
 const MidDiv = styled.div`
   height: 90vh; 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background: #313947;
 
@@ -83,6 +86,7 @@ const BotDiv = styled.div`
   display: flex;
   padding-left: 10%;
   align-items: center;
+  justify-content: space-around;
   background: #ededed;
 `
 

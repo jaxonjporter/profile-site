@@ -1,34 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, } from 'react';
 import styled from 'styled-components'
 import {Link,} from 'react-router-dom'
+import revlogo from '../images/reverseJaxonLogo.png'
+import logo from '../images/JaxonLogo.png'
 
 const Navbar = () => {
   const [active, setActive] = useState('')
+  const [local, setLocal] = useState('')
 
   const changeActive = (item) => {
     debugger
     setActive(item)
   }
 
+  useEffect( ()  => {
+    setLocal(window.location.pathname)
+  }, [])
+
+  const Homeornot = () => {
+   if (window.location.pathname == '/') {
+      return (<ImgDiv src={revlogo} />)
+    } else {
+      return(<ImgDiv src={logo} />)
+    }
+  }
+
   return(
     <NavDiv>
       <LeftRight>
         <NavItem as={Link} to='/' onClick={() => changeActive('home')}>
-          <NavText>Home</NavText>
+            {Homeornot()}
         </NavItem>
+      </LeftRight>
+      <LeftRight>
         <NavItem as={Link} to='/about' onClick={() => changeActive('about')}>
           <NavText>About</NavText>
         </NavItem>
         <NavItem>
           <NavText>Contact</NavText>
-        </NavItem>
-      </LeftRight>
-      <LeftRight>
-        <NavItem>
-          <h3>Info</h3>
-        </NavItem>
-        <NavItem>
-          <h3>Help</h3>
         </NavItem>
       </LeftRight>
     </NavDiv>
@@ -67,4 +76,14 @@ const LeftRight = styled.div`
 `
 const NavText = styled.h3`
   font-size: 1.7em;
+`
+const ImgDiv = styled.img`
+  width: 45px;
+  margin-top: 10px;
+  transition: all .2s ease-in-out;
+
+  :hover {
+    transform: scale(1.2); 
+  }
+
 `
