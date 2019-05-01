@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {Link,} from 'react-router-dom'
 import revlogo from '../../images/reverseJaxonLogo.png'
 import logo from '../../images/JaxonLogo.png'
+import posed from 'react-pose'
 // import TestBox from './TestBox'
 
 const Navbar = () => {
@@ -28,8 +29,8 @@ const Navbar = () => {
         <NavItem as={Link} to='/' onClick={() => changeActive('home')}>
             {Homeornot()}
         </NavItem>
-        {/* <TestBox />
-        <TestBox /> */}
+        {/* {/* <TestBox /> */}
+        {/* <TestBox /> */}
       </LeftRight>
       <LeftRight>
         <NavItem as={Link} to='/about' onClick={() => changeActive('about')}>
@@ -54,6 +55,21 @@ color: white;
 }
 `
 
+const Shakeh3 = posed.h3({
+  hoverable: true,
+  hover: {
+    applyAtEnd: { x: 0 },
+    applyAtStart: { x: -1 },
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 1000,
+      damping: 5,
+      duration: 3
+    }
+  }
+});
+
 
 const NavDiv = styled.div`
   position: absolute;
@@ -73,7 +89,7 @@ const LeftRight = styled.div`
   cursor: pointer;
 
 `
-const NavText = styled.h3`
+const NavText = styled(Shakeh3)`
   font-size: 1.7em;
 `
 const ImgDiv = styled.img`
