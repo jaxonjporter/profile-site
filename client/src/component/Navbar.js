@@ -6,16 +6,12 @@ import logo from '../images/JaxonLogo.png'
 
 const Navbar = () => {
   const [active, setActive] = useState('')
-  const [local, setLocal] = useState('')
 
   const changeActive = (item) => {
     debugger
     setActive(item)
   }
 
-  useEffect( ()  => {
-    setLocal(window.location.pathname)
-  }, [])
 
   const Homeornot = () => {
    if (window.location.pathname == '/') {
