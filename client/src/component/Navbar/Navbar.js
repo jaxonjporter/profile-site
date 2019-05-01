@@ -1,8 +1,9 @@
 import React, { useState, useEffect, } from 'react';
 import styled from 'styled-components'
 import {Link,} from 'react-router-dom'
-import revlogo from '../images/reverseJaxonLogo.png'
-import logo from '../images/JaxonLogo.png'
+import revlogo from '../../images/reverseJaxonLogo.png'
+import logo from '../../images/JaxonLogo.png'
+// import TestBox from './TestBox'
 
 const Navbar = () => {
   const [active, setActive] = useState('')
@@ -27,6 +28,8 @@ const Navbar = () => {
         <NavItem as={Link} to='/' onClick={() => changeActive('home')}>
             {Homeornot()}
         </NavItem>
+        {/* <TestBox />
+        <TestBox /> */}
       </LeftRight>
       <LeftRight>
         <NavItem as={Link} to='/about' onClick={() => changeActive('about')}>
