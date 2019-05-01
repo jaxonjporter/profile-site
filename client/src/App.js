@@ -4,6 +4,7 @@ import Home from './component/Home'
 import Navbar from './component/Navbar/Navbar'
 import NoMatch from './component/NoMatch'
 import { Container } from './styles/GlobalStyles'
+import About from './component/about/About'
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route component={NoMatch} />
+        <Route exact path='/about' component={About} />
+        <Route component={NoMatch}  />
       </Switch>
       <Container>
       </Container>

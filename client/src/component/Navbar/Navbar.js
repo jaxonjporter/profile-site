@@ -4,6 +4,7 @@ import {Link,} from 'react-router-dom'
 import revlogo from '../../images/reverseJaxonLogo.png'
 import logo from '../../images/JaxonLogo.png'
 import posed from 'react-pose'
+import Home from '../Home';
 // import TestBox from './TestBox'
 
 const Navbar = () => {
@@ -23,6 +24,14 @@ const Navbar = () => {
     }
   }
 
+  const nothome = () => {
+    if (window.location.pathname == '/') {
+      return null
+    } else {
+      return {color: 'black'}
+    }
+  }
+
   return(
     <NavDiv>
       <LeftRight>
@@ -34,10 +43,10 @@ const Navbar = () => {
       </LeftRight>
       <LeftRight>
         <NavItem as={Link} to='/about' onClick={() => changeActive('about')}>
-          <NavText>About</NavText>
+          <NavText style={nothome()}>About</NavText>
         </NavItem>
         <NavItem>
-          <NavText>Contact</NavText>
+          <NavText style={nothome()}>Contact</NavText>
         </NavItem>
       </LeftRight>
     </NavDiv>
