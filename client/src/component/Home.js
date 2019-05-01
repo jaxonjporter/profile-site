@@ -55,11 +55,14 @@ const MidText = styled.h1`
   color: #ededed;
   font-size: 5em;
   margin: 25px;
+  font-family: 'Noto Sans TC', sans-serif;
+
 `
 const BotText = styled.h1`
   color: #313947;
   font-size: 5em;
   margin: 0;
+  font-family: 'Noto Sans TC', sans-serif;
 `
 
 const Disp = styled.div`
