@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled, { css, } from 'styled-components';
 import logo from '../images/turtles.jpg'
 import Fade from 'react-reveal/Fade';
 import Jaxon from '../images/jaxonprofesionalcropped.jpg'
@@ -8,6 +8,9 @@ import './Home.css'
 
 
  const Home = () => {
+
+
+  
 
   return (
     <>
@@ -32,11 +35,29 @@ import './Home.css'
           <BotText>It's nice to meet you.</BotText>
         </BotRight>
       </BotDiv>
+      {/* <Content /> */}
     </>
+    
   )
 }
 
 export default Home 
+
+const sizes = {
+  desktop: 992,
+  tablet: 768,
+  phone: 576,
+}
+
+const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (max-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `
+
+  return acc
+}, {})
 
 const Hero = styled.div`
   width: 100%;
@@ -48,6 +69,12 @@ const Hero = styled.div`
   background-size: cover;
   background-attachment: fixed;
 
+  ${media.tablet`
+  background-position-x: 16%;
+  `}
+
+  
+
 `
 const Text = styled.h1`
   color: #fff8f4;
@@ -55,13 +82,7 @@ const Text = styled.h1`
   font-family: 'Noto Sans TC', sans-serif;
 
 `
-const Bot = styled.div`
-  display: flex;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  justify-content: center;
-`
+
 const BotRight = styled.div`
   display: flex;
   align-items: flex-start;
@@ -69,6 +90,12 @@ const BotRight = styled.div`
   width: 50%;
   height: 100%;
   justify-content: flex-start;
+
+  ${media.tablet`
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  `}
 `
 
 
@@ -88,8 +115,8 @@ const BotText = styled.h3`
 const BotImg = styled.img`
   margin: 0;
   border-radius: 50%;
-  height: 60%;
-  width: 60%;
+  min-height: 300px;
+  min-width: 300px;
 `
 
 const Disp = styled.div`
@@ -108,16 +135,37 @@ const MidDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   background: #313947;
-
-
 `
+
+
+
+
 const BotDiv = styled.div`
   height: 90vh; 
   display: flex;
   align-items: center;
   justify-content: space-around;
   background: #fff8f4;
-  padding: 10px
-  
+  padding: 10px;
+
+  ${media.tablet`
+    flex-direction: column;
+    justify-content: center;
+    `}
 `
 
+  // ${media.desktop`background: dodgerblue;`}
+  // ${media.tablet`background: mediumseagreen;`}
+  // ${media.phone`background: palevioletred;`}
+
+  const Bot = styled.div`
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+
+  ${media.tablet`width: 100%;`}
+`
+
+    
