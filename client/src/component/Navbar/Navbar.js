@@ -16,6 +16,7 @@ const Navbar = () => {
   }
 
 
+
   const Homeornot = () => {
    if (window.location.pathname == '/') {
       return (<ImgDiv src={revlogo} />)
@@ -28,7 +29,7 @@ const Navbar = () => {
     if (window.location.pathname == '/') {
       return null
     } else {
-      return {color: 'black'}
+      return {color: '#313947'}
     }
   }
 
@@ -57,7 +58,7 @@ export default Navbar
 
 const NavItem = styled.div`
 padding: 5px 15px;
-color: white;
+color: #fff8f4;
 
 :hover {
   color: grey;

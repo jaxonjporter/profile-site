@@ -8,11 +8,8 @@ const NoMatch = ({history}) => {
       <CoverDiv>
         <MidDiv>
           <h1>
-          You are nowhere
+          You have reached an unknown page
           </h1>
-          <h2>
-          You are nowhere
-          </h2>
           <ButtonBlue as='a' href='/'>
            Go Home
           </ButtonBlue>

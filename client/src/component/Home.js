@@ -17,7 +17,7 @@ import './Home.css'
           </Fade>
         </Disp>
       </Hero>
-        <Fade duration={2500}>
+        <Fade duration={1000}>
         <MidDiv key='mid'>
           <MidText> </MidText>
           <MidText>and developing websites.</MidText>
@@ -45,14 +45,14 @@ const Hero = styled.div`
 
 `
 const Text = styled.h1`
-  color: #f7faff;
+  color: #fff8f4;
   font-size: 5em;
   font-family: 'Noto Sans TC', sans-serif;
 
 `
 
 const MidText = styled.h1`
-  color: #ededed;
+  color: #fff8f4;
   font-size: 5em;
   margin: 25px;
   font-family: 'Noto Sans TC', sans-serif;
@@ -90,6 +90,6 @@ const BotDiv = styled.div`
   padding-left: 10%;
   align-items: center;
   justify-content: space-around;
-  background: #ededed;
+  background: #fff8f4;
 `
 
