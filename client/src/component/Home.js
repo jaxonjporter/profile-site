@@ -22,16 +22,19 @@ import './Home.css'
         </Disp>
       </Hero>
         <Fade duration={1000}>
-        <MidDiv key='mid'>
+        <MidDiv>
             <MidThree>
               <MidText>creating web apps,</MidText>
+              <MidP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</MidP>
             </MidThree>
             <MidThree>
               <MidText>phone apps</MidText>
+              <MidP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</MidP>
 
             </MidThree>
             <MidThree>
               <MidText>and design.</MidText>
+              <MidP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</MidP>
 
             </MidThree>
         </MidDiv>
@@ -42,6 +45,8 @@ import './Home.css'
         </Bot>
         <BotRight>
           <BotText>It's nice to meet you.</BotText>
+          <BotP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</BotP>
+
         </BotRight>
       </BotDiv>
       {/* <Content /> */}
@@ -76,6 +81,7 @@ const MidThree = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+  flex-direction: column;
 
   ${media.tablet`
     width: 100%;
@@ -86,7 +92,7 @@ const Hero = styled.div`
   width: 100%;
   contain: content;
   display: flex;  
-  height: 100vh;
+  height: 98vh;
   background-image: url(${logo}) !important;
   background-position: center;
   background-size: cover;
@@ -111,11 +117,11 @@ const Text = styled.h1`
 
 const BotRight = styled.div`
   display: flex;
-  align-items: flex-start;
-  padding-top: 10%;
+  align-items: center;
   width: 50%;
   height: 100%;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-direction: column;
 
   ${media.tablet`
     width: 100%;
@@ -136,6 +142,18 @@ const MidText = styled.h1`
   `}
 
 `
+const MidP = styled.p`
+  color: #fff8f4;
+  font-size: 1em;
+  font-family: 'Noto Sans TC', sans-serif;
+  padding: 20px;
+
+  ${media.tablet`
+  font-size: 3em;
+  margin: 10px;
+  `}
+
+`
 const BotText = styled.h3`
   color: #313947;
   font-size: 3em;
@@ -146,6 +164,7 @@ const BotImg = styled.img`
   margin: 0;
   border-radius: 50%;
   min-height: 300px;
+  height: 75%;
   min-width: 300px;
 `
 
@@ -160,7 +179,7 @@ const Disp = styled.div`
   align-items: center;
 `
 const MidDiv = styled.div`
-  height: 90vh; 
+  height: 80vh; 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -204,5 +223,17 @@ const BotDiv = styled.div`
 
   ${media.tablet`width: 100%;`}
 `
+
+const BotP = styled.p`
+  color: #313947;
+  font-size: 1em;
+  font-family: 'Noto Sans TC', sans-serif;
+  padding: 20px;
+  
+  ${media.tablet`
+  font-size: 3em;
+  margin: 10px;
+  `}
+  `
 
     
