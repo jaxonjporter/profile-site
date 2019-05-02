@@ -23,8 +23,17 @@ import './Home.css'
       </Hero>
         <Fade duration={1000}>
         <MidDiv key='mid'>
-          <MidText> </MidText>
-          <MidText>and developing websites.</MidText>
+            <MidThree>
+              <MidText>creating web apps,</MidText>
+            </MidThree>
+            <MidThree>
+              <MidText>phone apps</MidText>
+
+            </MidThree>
+            <MidThree>
+              <MidText>and design.</MidText>
+
+            </MidThree>
         </MidDiv>
         </Fade>
       <BotDiv>
@@ -49,6 +58,8 @@ const sizes = {
   phone: 576,
 }
 
+
+
 const media = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
     @media (max-width: ${sizes[label] / 16}em) {
@@ -58,6 +69,18 @@ const media = Object.keys(sizes).reduce((acc, label) => {
 
   return acc
 }, {})
+
+const MidThree = styled.div`
+  width: 33.33%
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  ${media.tablet`
+    width: 100%;
+  `}
+`
 
 const Hero = styled.div`
   width: 100%;
@@ -71,15 +94,18 @@ const Hero = styled.div`
 
   ${media.tablet`
   background-position-x: 16%;
+  justify-content: center;
   `}
-
-  
 
 `
 const Text = styled.h1`
   color: #fff8f4;
   font-size: 5em;
   font-family: 'Noto Sans TC', sans-serif;
+
+  ${media.tablet`
+  font-size: 4em;
+  `}
 
 `
 
@@ -101,9 +127,13 @@ const BotRight = styled.div`
 
 const MidText = styled.h1`
   color: #fff8f4;
-  font-size: 5em;
-  margin: 25px;
+  font-size: 2em;
   font-family: 'Noto Sans TC', sans-serif;
+
+  ${media.tablet`
+  font-size: 3em;
+  margin: 10px;
+  `}
 
 `
 const BotText = styled.h3`
@@ -132,9 +162,16 @@ const Disp = styled.div`
 const MidDiv = styled.div`
   height: 90vh; 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: #313947;
+
+  ${media.tablet`
+  justify-content: center;
+  flex-direction: column;
+  `}
+
+
 `
 
 
