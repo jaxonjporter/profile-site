@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import logo from '../images/turtles.jpg'
 import Fade from 'react-reveal/Fade';
+import Jaxon from '../images/jaxonprofesionalcropped.jpg'
 
 import './Home.css'
 
@@ -24,8 +25,12 @@ import './Home.css'
         </MidDiv>
         </Fade>
       <BotDiv>
-        <BotText>Will be pic</BotText>
-        <BotText>It's nice to meet you.</BotText>
+        <Bot>
+          <BotImg src={Jaxon}/>
+        </Bot>
+        <BotRight>
+          <BotText>It's nice to meet you.</BotText>
+        </BotRight>
       </BotDiv>
     </>
   )
@@ -50,6 +55,22 @@ const Text = styled.h1`
   font-family: 'Noto Sans TC', sans-serif;
 
 `
+const Bot = styled.div`
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+`
+const BotRight = styled.div`
+  display: flex;
+  align-items: flex-start;
+  padding-top: 10%;
+  width: 50%;
+  height: 100%;
+  justify-content: flex-start;
+`
+
 
 const MidText = styled.h1`
   color: #fff8f4;
@@ -58,11 +79,17 @@ const MidText = styled.h1`
   font-family: 'Noto Sans TC', sans-serif;
 
 `
-const BotText = styled.h1`
+const BotText = styled.h3`
   color: #313947;
-  font-size: 5em;
+  font-size: 3em;
   margin: 0;
   font-family: 'Noto Sans TC', sans-serif;
+`
+const BotImg = styled.img`
+  margin: 0;
+  border-radius: 50%;
+  height: 60%;
+  width: 60%;
 `
 
 const Disp = styled.div`
@@ -87,9 +114,10 @@ const MidDiv = styled.div`
 const BotDiv = styled.div`
   height: 90vh; 
   display: flex;
-  padding-left: 10%;
   align-items: center;
   justify-content: space-around;
   background: #fff8f4;
+  padding: 10px
+  
 `
 

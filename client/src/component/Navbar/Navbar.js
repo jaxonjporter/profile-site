@@ -1,24 +1,25 @@
-import React, { useState, useEffect, } from 'react';
+import React, { useState, } from 'react';
 import styled from 'styled-components'
 import {Link,} from 'react-router-dom'
 import revlogo from '../../images/reverseJaxonLogo.png'
 import logo from '../../images/JaxonLogo.png'
 import posed from 'react-pose'
-import Home from '../Home';
 // import TestBox from './TestBox'
 
 const Navbar = () => {
-  const [active, setActive] = useState('')
+  const [active, setActive] = useState('home')
+  const [size, setSize] = useState()
 
   const changeActive = (item) => {
     debugger
     setActive(item)
   }
 
+  
 
 
   const Homeornot = () => {
-   if (window.location.pathname == '/') {
+   if (window.location.pathname === '/') {
       return (<ImgDiv src={revlogo} />)
     } else {
       return(<ImgDiv src={logo} />)
@@ -26,15 +27,16 @@ const Navbar = () => {
   }
 
   const nothome = () => {
-    if (window.location.pathname == '/') {
+    if (window.location.pathname === '/') {
       return null
     } else {
       return {color: '#313947'}
     }
   }
 
-  return(
-    <NavDiv>
+  const Nav = () => {
+    if (window.innerWidth > 600) { return (
+      <NavDiv>
       <LeftRight>
         <NavItem as={Link} to='/' onClick={() => changeActive('home')}>
             {Homeornot()}
@@ -50,7 +52,33 @@ const Navbar = () => {
           <NavText style={nothome()}>Contact</NavText>
         </NavItem>
       </LeftRight>
-    </NavDiv>
+      </NavDiv>
+    )} else {
+      return (
+      <>
+      </>)
+    }
+  }
+
+  return(
+    <Nav />
+    // <NavDiv>
+    //   <LeftRight>
+    //     <NavItem as={Link} to='/' onClick={() => changeActive('home')}>
+    //         {Homeornot()}
+    //     </NavItem>
+    //     {/* {/* <TestBox /> */}
+    //     {/* <TestBox /> */}
+    //   </LeftRight>
+    //   <LeftRight>
+    //     <NavItem as={Link} to='/about' onClick={() => changeActive('about')}>
+    //       <NavText style={nothome()}>About</NavText>
+    //     </NavItem>
+    //     <NavItem>
+    //       <NavText style={nothome()}>Contact</NavText>
+    //     </NavItem>
+    //   </LeftRight>
+    // </NavDiv>
   )
 }
 
@@ -61,7 +89,7 @@ padding: 5px 15px;
 color: #fff8f4;
 
 :hover {
-  color: grey;
+  color: #ededed;
 }
 `
 
