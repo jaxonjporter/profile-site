@@ -59,8 +59,8 @@ export default Home
 
 const sizes = {
   desktop: 992,
-  tablet: 768,
-  phone: 576,
+  tablet: 1068,
+  phone: 606,
 }
 
 
@@ -92,7 +92,7 @@ const Hero = styled.div`
   width: 100%;
   contain: content;
   display: flex;  
-  height: 98vh;
+  min-height: 100vh;
   background-image: url(${logo}) !important;
   background-position: center;
   background-size: cover;
@@ -137,26 +137,26 @@ const MidText = styled.h1`
   font-family: 'Noto Sans TC', sans-serif;
 
   ${media.tablet`
-  font-size: 3em;
+  font-size: 2em;
   margin: 10px;
   `}
 
 `
 const MidP = styled.p`
   color: #fff8f4;
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: 'Noto Sans TC', sans-serif;
   padding: 20px;
 
   ${media.tablet`
-  font-size: 3em;
+  font-size: 1em;
   margin: 10px;
   `}
 
 `
 const BotText = styled.h3`
   color: #313947;
-  font-size: 3em;
+  font-size: 2em;
   margin: 0;
   font-family: 'Noto Sans TC', sans-serif;
 `
@@ -179,11 +179,12 @@ const Disp = styled.div`
   align-items: center;
 `
 const MidDiv = styled.div`
-  height: 80vh; 
+  min-height: 80vh; 
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: #313947;
+  padding: 5% 0%;
 
   ${media.tablet`
   justify-content: center;
@@ -197,7 +198,7 @@ const MidDiv = styled.div`
 
 
 const BotDiv = styled.div`
-  height: 90vh; 
+  min-height: 90vh; 
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -226,12 +227,12 @@ const BotDiv = styled.div`
 
 const BotP = styled.p`
   color: #313947;
-  font-size: 1em;
+  font-size: 1.4em;
   font-family: 'Noto Sans TC', sans-serif;
   padding: 20px;
   
   ${media.tablet`
-  font-size: 3em;
+  font-size: 1em;
   margin: 10px;
   `}
   `

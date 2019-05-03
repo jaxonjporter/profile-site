@@ -35,7 +35,7 @@ const Navbar = () => {
   }
 
   const Nav = () => {
-    if (window.innerWidth > 600) { return (
+    if (window.innerWidth > 20) { return (
       <NavDiv>
       <LeftRight>
         <NavItem as={Link} to='/' onClick={() => changeActive('home')}>
