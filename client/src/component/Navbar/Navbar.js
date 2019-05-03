@@ -15,9 +15,6 @@ const Navbar = () => {
     setActive(item)
   }
 
-  
-
-
   const Homeornot = () => {
    if (window.location.pathname === '/') {
       return (<ImgDiv src={revlogo} />)
@@ -127,8 +124,14 @@ const LeftRight = styled.div`
   cursor: pointer;
 
 `
-const NavText = styled(Shakeh3)`
+const NavText = styled.h3`
   font-size: 1.7em;
+
+  transition: all .2s ease-in-out;
+
+  :hover {
+    transform: scale(1.2); 
+  }
 `
 const ImgDiv = styled.img`
   width: 45px;

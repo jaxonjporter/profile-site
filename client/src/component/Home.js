@@ -3,6 +3,7 @@ import styled, { css, } from 'styled-components';
 import logo from '../images/turtles.jpg'
 import Fade from 'react-reveal/Fade';
 import Jaxon from '../images/jaxonprofesionalcropped.jpg'
+import posed from 'react-pose';
 
 import './Home.css'
 
@@ -75,13 +76,29 @@ const media = Object.keys(sizes).reduce((acc, label) => {
   return acc
 }, {})
 
-const MidThree = styled.div`
+const ShakeDiv = posed.h3({
+  hoverable: true,
+  hover: {
+    applyAtEnd: { x: 0 },
+    applyAtStart: { x: -2 },
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 1000,
+      damping: 5,
+      duration: 3
+    }
+  }
+});
+
+const MidThree = styled(ShakeDiv)`
   width: 33.33%
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   flex-direction: column;
+  margin: 0;
 
   ${media.tablet`
     width: 100%;
@@ -210,11 +227,6 @@ const BotDiv = styled.div`
     justify-content: center;
     `}
 `
-
-  // ${media.desktop`background: dodgerblue;`}
-  // ${media.tablet`background: mediumseagreen;`}
-  // ${media.phone`background: palevioletred;`}
-
   const Bot = styled.div`
   display: flex;
   align-items: center;
