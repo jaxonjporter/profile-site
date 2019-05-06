@@ -76,7 +76,7 @@ const media = Object.keys(sizes).reduce((acc, label) => {
   return acc
 }, {})
 
-const ShakeDiv = posed.h3({
+const ShakeDiv = posed.div({
   hoverable: true,
   hover: {
     applyAtEnd: { x: 0 },
