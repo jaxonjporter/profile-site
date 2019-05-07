@@ -4,7 +4,6 @@ class Api::ContactsController < ApplicationController
   end
 
   def create
-    binding.pry
     contact = Contact.new(contact_params)
 
     if contact.save
