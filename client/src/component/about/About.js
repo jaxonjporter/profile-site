@@ -1,6 +1,5 @@
 import React, { useState, } from 'react';
 import styled from 'styled-components'
-import { Document } from 'react-pdf/dist/entry.parcel';
 import res from '../../images/JaxonPorterRes.jpg'
 
 const About = () => {

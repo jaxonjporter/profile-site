@@ -45,7 +45,7 @@ const Navbar = () => {
         <NavItem as={Link} to='/about' onClick={() => changeActive('about')}>
           <NavText style={nothome()}>About</NavText>
         </NavItem>
-        <NavItem>
+        <NavItem as={Link} to='/contact' onClick={() => changeActive('contact')}>
           <NavText style={nothome()}>Contact</NavText>
         </NavItem>
       </LeftRight>
