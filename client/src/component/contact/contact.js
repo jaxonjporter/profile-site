@@ -1,6 +1,6 @@
 import React, { useState, } from 'react'
 import styled from 'styled-components'
-import { useFormInput, } from "../../hooks/useFormInput";
+import { useFormInput, } from '../../hooks/useFormInput';
 import axios from 'axios'
 
 
@@ -8,18 +8,16 @@ import axios from 'axios'
 
 
 const Contact = () => {
-  const name = useFormInput('')
-  const email = useFormInput('')
-  const subject = useFormInput('')
-  const body = useFormInput('')
+  const Name = useFormInput('')
+  const Email = useFormInput('')
+  const Subject = useFormInput('')
+  const Body = useFormInput('')
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/api/blogs", { name, email, subject, body, })
-      .then( res => {
-        debugger
-      }).catch(res => {debugger})
+    axios.post("/api/contacts", { name: Name.value, email: Email.value, subject: Subject.value, body: Body.value, })
+      .then( res => { alert('Contact Submitted Successfully')})
   }
 
   return(
@@ -31,29 +29,30 @@ const Contact = () => {
             placeholder="Name"
             name="Name"
             required
-            { ...name }
+            { ...Name }
           />        
           <input
             label="email"
             placeholder="Email"
-            name="email"
+            name="Email"
             required
-            { ...email }
+            { ...Email }
           />        
           <input
             label="subject"
             placeholder="Subject"
-            name="subject"
+            name="Subject"
             required
-            { ...subject }
+            { ...Subject }
           />        
           <input
             label="body"
             placeholder="Body"
-            name="body"
+            name="Body"
             required
-            { ...body }
-          />        
+            { ...Body }
+          /> 
+          <button>Submit</button>       
           </form>
       </Container>
     </MainDiv>
