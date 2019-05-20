@@ -25,6 +25,12 @@ const Contact = () => {
   return(
     <MainDiv>
       <Container>
+        <TitleDiv>
+          <Title>Contact Me</Title>
+          <Title3>Please fill out all fields</Title3>
+
+        </TitleDiv>
+
         <form id='test' onSubmit={handleSubmit}>
           <InputForm
             label="name"
@@ -134,4 +140,22 @@ const Container = styled.div`
   padding-top: 100px;
 `
 
+
+const TitleDiv = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+`
+
+const Title = styled.h1`
+  margin-bottom: 0px;
+`
+
+const Title3 = styled.p`
+  margin: 5px 5px 10px 5px !important;
+
+`
 export default Contact
