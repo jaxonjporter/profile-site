@@ -4,12 +4,15 @@ import res from '../../images/JaxonPorterRes.jpg'
 
 const About = () => {
 
+
   return(
+    <>
     <MainDiv>
       <Container>
       <Resume src={res} />
       </Container>
     </MainDiv>
+    </>
   )
 }
 
@@ -30,3 +33,8 @@ const Resume = styled.img`
 
 
 export default About
+
+// Todo -- Create trello board. 
+// Ask Madi to create a wireframe for me. 
+// See if there is something I can work on. 
+// Look for cool PDF viewer packages.

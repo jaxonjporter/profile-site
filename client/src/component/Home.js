@@ -4,7 +4,6 @@ import logo from '../images/turtles.jpg'
 import Fade from 'react-reveal/Fade';
 import Jaxon from '../images/jaxonprofesionalcropped.jpg'
 import posed from 'react-pose';
-
 import './Home.css'
 
 
@@ -26,11 +25,11 @@ import './Home.css'
         <MidDiv>
             <MidThree>
               <MidText>creating web apps,</MidText>
-              <MidP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</MidP>
+              <MidP>I have created applications of all sorts, If it be a static page with little to know backend, to powerful management software. If you have a project that needs to be done, contact me and I would love to do it.</MidP>
             </MidThree>
             <MidThree>
               <MidText>phone apps</MidText>
-              <MidP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</MidP>
+              <MidP>Apple or Android you name it, and I can do it. Do you need a full system of software, one that works with your website and other software applications? I can do it. If you want it created, I can get it done. </MidP>
 
             </MidThree>
             <MidThree>
@@ -50,7 +49,6 @@ import './Home.css'
 
         </BotRight>
       </BotDiv>
-      {/* <Content /> */}
     </>
     
   )
@@ -161,9 +159,21 @@ const MidText = styled.h1`
 `
 const MidP = styled.p`
   color: #fff8f4;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-family: 'Noto Sans TC', sans-serif;
   padding: 20px;
+
+  ${media.tablet`
+  font-size: 1em;
+  margin: 10px;
+  `}
+
+`
+const FootText = styled.p`
+  color: #fff8f4;
+  font-size: 1em;
+  font-family: 'Noto Sans TC', sans-serif;
+  padding: 5px;
 
   ${media.tablet`
   font-size: 1em;
@@ -202,6 +212,21 @@ const MidDiv = styled.div`
   align-items: center;
   background: #313947;
   padding: 5% 0%;
+
+  ${media.tablet`
+  justify-content: center;
+  flex-direction: column;
+  `}
+
+
+`
+const FooterDiv = styled.div`
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #313947;
+
 
   ${media.tablet`
   justify-content: center;

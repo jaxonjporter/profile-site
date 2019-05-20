@@ -6,6 +6,7 @@ import NoMatch from './component/NoMatch'
 import { Container } from './styles/GlobalStyles'
 import Contact from './component/contact/contact'
 import About from './component/about/About'
+import Footer from './component/Footer'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route exact path='/contact' component={Contact} />
         <Route component={NoMatch}  />
       </Switch>
+      <Footer />
       <Container>
       </Container>
     </>
