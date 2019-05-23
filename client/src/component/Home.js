@@ -169,18 +169,7 @@ const MidP = styled.p`
   `}
 
 `
-const FootText = styled.p`
-  color: #fff8f4;
-  font-size: 1em;
-  font-family: 'Noto Sans TC', sans-serif;
-  padding: 5px;
-
-  ${media.tablet`
-  font-size: 1em;
-  margin: 10px;
-  `}
-
-`
+ 
 const BotText = styled.h3`
   color: #313947;
   font-size: 2em;
@@ -218,24 +207,7 @@ const MidDiv = styled.div`
   flex-direction: column;
   `}
 
-
 `
-const FooterDiv = styled.div`
-  height: 5vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #313947;
-
-
-  ${media.tablet`
-  justify-content: center;
-  flex-direction: column;
-  `}
-
-
-`
-
 
 
 
