@@ -6,13 +6,11 @@ const About = () => {
 
 
   return(
-    <>
     <MainDiv>
       <Container>
       <Resume src={res} />
       </Container>
     </MainDiv>
-    </>
   )
 }
 

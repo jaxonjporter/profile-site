@@ -1,0 +1,2 @@
+gmail_username: 'ENV[username]'
+gmail_password: 'ENV[password]'

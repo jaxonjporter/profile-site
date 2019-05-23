@@ -25,7 +25,7 @@ import './Home.css'
         <MidDiv>
             <MidThree>
               <MidText>creating web apps,</MidText>
-              <MidP>I have created applications of all sorts, If it be a static page with little to know backend, to powerful management software. If you have a project that needs to be done, contact me and I would love to do it.</MidP>
+              <MidP>I have created applications of all sorts, from static pages with little to no backend, to powerful management software. If you have a project that needs to be done, contact me and I would love to do it.</MidP>
             </MidThree>
             <MidThree>
               <MidText>phone apps</MidText>
@@ -34,7 +34,7 @@ import './Home.css'
             </MidThree>
             <MidThree>
               <MidText>and design.</MidText>
-              <MidP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</MidP>
+              <MidP> There isn't much worse on the internet than a poorly designed website. Whatever your taste for a website is, I can do it. I have spent many hours designing and learning the ins and outs of design.</MidP>
 
             </MidThree>
         </MidDiv>
@@ -159,7 +159,7 @@ const MidText = styled.h1`
 `
 const MidP = styled.p`
   color: #fff8f4;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-family: 'Noto Sans TC', sans-serif;
   padding: 20px;
 
