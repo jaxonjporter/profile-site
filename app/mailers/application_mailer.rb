@@ -3,7 +3,7 @@ class ApplicationMailer < ActionMailer::Base
 
   def contact_form(contact)
     @contact = contact
-    @specialtext = `Hi, #{contact.name} wants to talk to you.
-    mail(to: "jaxonutah@gmail.com", subject: "Someone wants to connect with you")
+    @specialtext = `Hi, #{contact.name} wants to talk to you.`
+    mail(to: "I will get here", subject: "Someone wants to connect with you")
   end
 end
